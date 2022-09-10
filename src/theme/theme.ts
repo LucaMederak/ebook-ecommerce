@@ -3,13 +3,14 @@ import { DefaultTheme } from "styled-components";
 export const defaultTheme: DefaultTheme = {
   palette: {
     primary: {
-      main: "#04B900",
-      light: "rgba(0, 210, 34, 0.08)",
-      active: "#04B900",
+      main: "#067DF7",
+      light: "rgba(6, 125, 247, 0.09)",
+      active: "#0360BE",
     },
     secondary: {
-      main: "#202730",
-      active: "#1F2830",
+      main: "#4C5458",
+      light: "rgba(76, 84, 88, 0.1)",
+      active: "#3E464A",
     },
     disabled: "rgba(255, 168, 0, 0.20)",
     common: {
