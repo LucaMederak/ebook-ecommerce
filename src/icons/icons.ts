@@ -36,6 +36,7 @@ import {
   FaHeadset,
   FaStripe,
   FaExpand,
+  FaBook,
 } from "react-icons/fa";
 
 export {
@@ -75,4 +76,5 @@ export {
   FaHeadset,
   FaStripe,
   FaExpand,
+  FaBook,
 };
