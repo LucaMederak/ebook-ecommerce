@@ -10,6 +10,7 @@ import OfferContainer from "@/components/offer/offerContainer/OfferContainer";
 import Offer from "@/components/offer/Offer";
 import RecommendProducts from "@/components/recommendProducts/RecommendProducts";
 import SaleProducts from "@/components/saleProducts/SaleProducts";
+import Categories from "@/components/categories/Categories";
 
 //icons
 import { FaHeadset, FaTruck, FaBook } from "@/icons/icons";
@@ -47,6 +48,7 @@ const Home: NextPage = () => {
         </OfferContainer>
         <RecommendProducts />
         <SaleProducts />
+        <Categories />
       </Section>
     </>
   );
