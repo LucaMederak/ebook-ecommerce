@@ -27,13 +27,19 @@ import SectionLoading from "@/components/loading/section/SectionLoading";
 import { IBurgerProps } from "../nav/burger/Burger.interfaces";
 
 //helpers
-import { search, categoriesMainValues } from "./navSearch/NavSearch.helpers";
+import {
+  search,
+  categoriesMainValues,
+  productsMainValues,
+} from "./navSearch/NavSearch.helpers";
 
 //apollo
 import { GetCategories } from "@/queries/categories/getCategories";
+import { GetProducts } from "@/queries/products/getProducts";
 
 const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
   const { categories, categoriesLoading, categoriesError } = GetCategories();
+  const { products, productsLoading, productsError } = GetProducts();
 
   const { showPageBlur, deletePageBlur, tooglePageBlur } = usePageBlur();
   const [searchData, setSearchData] = useState("");
@@ -52,11 +58,16 @@ const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
     }
   }, [searchData, deletePageBlur, showPageBlur]);
 
-  if (categoriesLoading) return <SectionLoading />;
-  if (categoriesError) return null;
+  if (categoriesLoading || productsLoading) return <SectionLoading />;
+  if (categoriesError || productsError) return null;
 
   //concat products & categories
-  const data = [...categoriesMainValues(categories)];
+  const data = [
+    ...categoriesMainValues(categories),
+    ...productsMainValues(products),
+  ];
+
+  console.log({ data });
 
   return (
     <Styled.Container>

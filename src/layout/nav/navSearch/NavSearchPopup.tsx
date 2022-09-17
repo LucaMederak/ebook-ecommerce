@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 //assets
 import SearchResult from "@/assets/search-result.svg";
@@ -14,7 +15,7 @@ import IconButton from "@/components/iconButton/IconButton";
 import { FaSearch, FaTimes, FaCartPlus } from "@/icons/icons";
 
 //interfaces
-import { Search } from "./NavSearch.helpers";
+import { ISearchData, Search } from "./NavSearch.helpers";
 
 interface ISearch {
   data: Search;
@@ -23,7 +24,7 @@ interface ISearch {
 
 const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  const price = false;
+  const router = useRouter();
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {
@@ -40,6 +41,17 @@ const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
     };
   }, []);
 
+  const navigateToItemPage = (
+    itemType: ISearchData["type"],
+    itemSlug: ISearchData["slug"]
+  ) => {
+    if (itemType === "kategoria") {
+      return router.push(`/kategorie/${itemSlug}`);
+    }
+
+    return router.push(`/produkty/${itemSlug}`);
+  };
+
   return (
     <Styled.SearchPopupWrapper ref={modalRef}>
       {data.length === 0 && (
@@ -55,7 +67,7 @@ const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
       )}
 
       {data.length > 0 &&
-        data.map(({ name, type, image, id }) => (
+        data.map(({ name, type, image, id, slug, price }) => (
           <Styled.DataItemProductInfoWrapper key={id}>
             <Styled.ItemWrapper>
               <Styled.ImageWrapper>
@@ -77,14 +89,17 @@ const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
             <Styled.DataItemProductActions>
               {price && (
                 <Styled.Price>
-                  <h2>20 zł</h2>
-                  <IconButton>
+                  <h2>{price} zł</h2>
+                  {/* <IconButton>
                     <FaCartPlus />
-                  </IconButton>
+                  </IconButton> */}
                 </Styled.Price>
               )}
 
-              <IconButton variant="info" onClick={() => console.log("search")}>
+              <IconButton
+                variant="info"
+                onClick={() => navigateToItemPage(type, slug)}
+              >
                 <FaSearch />
               </IconButton>
             </Styled.DataItemProductActions>
