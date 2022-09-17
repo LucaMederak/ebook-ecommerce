@@ -8,6 +8,8 @@ import Info from "@/components/info/Info";
 import Heading from "@/components/heading/Heading";
 import OfferContainer from "@/components/offer/offerContainer/OfferContainer";
 import Offer from "@/components/offer/Offer";
+import RecommendProducts from "@/components/recommendProducts/RecommendProducts";
+import SaleProducts from "@/components/saleProducts/SaleProducts";
 
 //icons
 import { FaHeadset, FaTruck, FaBook } from "@/icons/icons";
@@ -43,6 +45,8 @@ const Home: NextPage = () => {
             description={`Dbamy aby produkty były odpowiednio zapakowane`}
           />
         </OfferContainer>
+        <RecommendProducts />
+        <SaleProducts />
       </Section>
     </>
   );

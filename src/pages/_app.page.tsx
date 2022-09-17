@@ -3,9 +3,9 @@ import type { AppProps } from "next/app";
 
 import Head from "next/head";
 
-//store
-// import { store } from "@/store/store";
-// import { Provider as StoreProvider } from "react-redux";
+store;
+import { store } from "@/store/store";
+import { Provider as StoreProvider } from "react-redux";
 
 //styles
 import GlobalStyle from "@/theme/globalStyle";
@@ -32,13 +32,13 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ApolloProvider client={client}>
         <DarkModeProvider>
           <PageBlurProvider>
-            {/* <StoreProvider store={store}> */}
-            <CartAlertProvider>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            </CartAlertProvider>
-            {/* </StoreProvider> */}
+            <StoreProvider store={store}>
+              <CartAlertProvider>
+                <Layout>
+                  <Component {...pageProps} />
+                </Layout>
+              </CartAlertProvider>
+            </StoreProvider>
           </PageBlurProvider>
         </DarkModeProvider>
       </ApolloProvider>
