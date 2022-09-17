@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
 //assets
@@ -22,9 +22,26 @@ interface ISearch {
 }
 
 const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
+  const modalRef = useRef<HTMLDivElement>(null);
   const price = false;
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (!modalRef.current?.contains(e.target as Node)) {
+        document.body.style.overflowY = "visible";
+        setSearchData("");
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  }, []);
+
   return (
-    <Styled.SearchPopupWrapper>
+    <Styled.SearchPopupWrapper ref={modalRef}>
       {data.length === 0 && (
         <Styled.BrakingSearchResultWrapper>
           <h2>Brak wyników</h2>
