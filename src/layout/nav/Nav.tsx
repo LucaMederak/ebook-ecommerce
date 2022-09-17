@@ -18,7 +18,7 @@ import * as Icon from "@/icons/icons";
 import NavHeader from "./navHeader/NavHeader";
 import ThemeOption from "./navOptions/themeOption/ThemeOption";
 // import AccountOption from "./navOptions/accountOption/AccountOption";
-// import CartOption from "./navOptions/cartOption/CartOption";
+import CartOption from "./navOptions/cartOption/CartOption";
 import NavCategories from "./navCategories/NavCategories";
 import NavSearchPopup from "./navSearch/NavSearchPopup";
 import SectionLoading from "@/components/loading/section/SectionLoading";
@@ -87,7 +87,7 @@ const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
         <Styled.NavOptionsWrapper>
           <ThemeOption />
           {/* <AccountOption /> */}
-          {/* <CartOption /> */}
+          <CartOption />
         </Styled.NavOptionsWrapper>
         {searchData && (
           <NavSearchPopup
