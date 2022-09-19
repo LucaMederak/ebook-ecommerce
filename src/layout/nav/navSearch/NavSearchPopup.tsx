@@ -49,7 +49,7 @@ const NavSearchPopup = ({ data, setSearchData }: ISearch) => {
       return router.push(`/kategorie/${itemSlug}`);
     }
 
-    return router.push(`/produkty/${itemSlug}`);
+    return router.push(`/produkt/${itemSlug}`);
   };
 
   return (
