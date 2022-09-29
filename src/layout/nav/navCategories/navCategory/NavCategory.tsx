@@ -3,7 +3,6 @@ import Link from "next/link";
 
 //hooks
 import { usePageBlur } from "@/context/PageBlur";
-import SubCategoriesPopup from "../popup/SubCategoriesPopup";
 
 //styles
 import * as Styled from "./NavCategory.styles";
