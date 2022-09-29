@@ -21,12 +21,6 @@ export const ProductQuery = gql`
           }
           name
         }
-        subCategory {
-          sys {
-            id
-          }
-          name
-        }
         image {
           sys {
             id
