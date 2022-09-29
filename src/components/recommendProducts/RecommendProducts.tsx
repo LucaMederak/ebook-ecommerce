@@ -21,7 +21,7 @@ const RecommendProducts = () => {
     <>
       {products.length > 0 && (
         <Section>
-          <Heading title="Najchętniej wybierane produkty" align="center">
+          <Heading title="Najchętniej wybierane ebooki" align="center">
             <Info>bestsellery</Info>
           </Heading>
           <ProductContainer>

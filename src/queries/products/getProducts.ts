@@ -18,10 +18,10 @@ export const GetProducts = () => {
         id: productData.category?.sys.id,
         name: productData.category?.name,
       },
-      subCategory: {
-        id: productData.subCategory?.sys.id,
-        name: productData.subCategory?.name,
-      },
+      // subCategory: {
+      //   id: productData.subCategory?.sys.id,
+      //   name: productData.subCategory?.name,
+      // },
       img: {
         id: productData.image.sys.id,
         url: productData.image.url,

@@ -37,14 +37,14 @@ const Home: NextPage = () => {
           />
           <Offer
             icon={<FaHeadset />}
-            title="Doradzamy w wyborze produktu"
-            description={`Chętnie doradzimy w wyborze produktu`}
+            title="Doradzamy w wyborze"
+            description={`Chętnie doradzimy w wyborze ebooka`}
           />
-          <Offer
+          {/* <Offer
             icon={<FaTruck />}
             title="Bezpieczna wysyłka"
             description={`Dbamy aby produkty były odpowiednio zapakowane`}
-          />
+          /> */}
         </OfferContainer>
         <RecommendProducts />
         <SaleProducts />

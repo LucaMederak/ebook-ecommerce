@@ -18,12 +18,6 @@ export const ProductsQuery = gql`
           }
           name
         }
-        subCategory {
-          sys {
-            id
-          }
-          name
-        }
         image {
           sys {
             id

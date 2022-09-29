@@ -71,7 +71,7 @@ const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
 
   return (
     <Styled.Container>
-      <NavHeader />
+      {/* <NavHeader /> */}
       <Styled.NavWrapper>
         <Link href="/">
           <a>

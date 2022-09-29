@@ -12,10 +12,10 @@ export interface IProduct {
     id?: string;
     name?: string;
   };
-  subCategory: {
-    id?: string;
-    name?: string;
-  };
+  // subCategory: {
+  //   id?: string;
+  //   name?: string;
+  // };
   img: {
     id: string;
     url: string;

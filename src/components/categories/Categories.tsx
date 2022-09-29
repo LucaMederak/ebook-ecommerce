@@ -18,7 +18,7 @@ const Categories = () => {
     <>
       {categories.length > 0 && (
         <Section>
-          <Heading title="Kategorie produktów" align="center">
+          <Heading title="Kategorie" align="center">
             <Info>kategorie</Info>
           </Heading>
           <CategoryContainer>
