@@ -105,8 +105,8 @@ const stripeOrder = async (req: IReqStripeOrder, res: NextApiResponse) => {
 
   const session: Stripe.Checkout.Session =
     await stripe.checkout.sessions.create({
-      success_url: "http://localhost:3000/payment/success",
-      cancel_url: "http://localhost:3000/payment/cancel",
+      success_url: "https://ebook-ecommerce-difr.vercel.app",
+      cancel_url: "https://ebook-ecommerce-difr.vercel.app",
       payment_method_types: ["card", "p24"],
       line_items: sessionLineItems,
       mode: "payment",
