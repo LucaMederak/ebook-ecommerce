@@ -12,9 +12,6 @@ export const ProductQuery = gql`
         price
         salePrice
         shortDescription
-        description {
-          json
-        }
         category {
           sys {
             id

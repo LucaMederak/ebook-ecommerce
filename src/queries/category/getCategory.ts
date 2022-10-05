@@ -12,9 +12,9 @@ export const GetCategory = (slug: string) => {
 
   if (!categoryData) {
     return {
-      product: undefined,
-      productLoading: !categoryData && !error,
-      productError: error,
+      category: undefined,
+      categoryLoading: !categoryData && !error,
+      categoryError: error,
     };
   }
 

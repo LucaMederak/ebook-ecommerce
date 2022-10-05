@@ -9,9 +9,9 @@ export interface IProductData {
   price: number;
   salePrice?: number;
   shortDescription: string;
-  description: {
-    json: RichTextType.Document;
-  };
+  // description: {
+  //   json: RichTextType.Document;
+  // };
   category: {
     sys: {
       id: string;

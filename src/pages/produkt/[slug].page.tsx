@@ -33,6 +33,7 @@ const Product = () => {
   const { slug } = router.query as IParams;
   const { product, productError, productLoading } = GetProduct(slug);
 
+  console.log({ product });
   if (productLoading) return <SectionLoading />;
   if (productError) return null;
   if (!product) return null;
