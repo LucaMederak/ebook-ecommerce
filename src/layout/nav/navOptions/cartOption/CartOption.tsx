@@ -64,7 +64,9 @@ const CartOption = () => {
   return (
     <NavOptionWrapper onMouseEnter={handlePopup} onMouseLeave={handlePopup}>
       <Icon.FaShoppingCart />
-      <Styled.CartItemsInfo>{items.length}</Styled.CartItemsInfo>
+      <Styled.CartItemsInfo id="cart-length">
+        {items.length}
+      </Styled.CartItemsInfo>
       <AnimatePresence>
         {cartPopup && (
           <NavOptionPopup>

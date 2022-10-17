@@ -25,8 +25,12 @@ const RecommendProducts = () => {
             <Info>bestsellery</Info>
           </Heading>
           <ProductContainer>
-            {products.map((product) => (
-              <Product key={product.id} product={product} />
+            {products.map((product, index) => (
+              <Product
+                productIndex={index}
+                key={product.id}
+                product={product}
+              />
             ))}
           </ProductContainer>
         </Section>

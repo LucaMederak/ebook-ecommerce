@@ -20,7 +20,7 @@ import { RootState } from "@/store/store";
 //context
 import { useCartAlert } from "@/context/CartAlert";
 
-const Product = ({ product }: IProductProps) => {
+const Product = ({ product, productIndex }: IProductProps) => {
   const { handleCartAlert } = useCartAlert();
   const { totalPrice, items } = useSelector((state: RootState) => state.cart);
   const [activeShopItem, setActiveShopItem] = useState(false);
@@ -87,7 +87,7 @@ const Product = ({ product }: IProductProps) => {
             <h2>{product.price} zł</h2>
           )}
           <button
-            aria-label="addToCart"
+            id={`product-${productIndex}`}
             // disabled={getProductCart(product.id)}
             onClick={() => addToCart(product)}
           >
