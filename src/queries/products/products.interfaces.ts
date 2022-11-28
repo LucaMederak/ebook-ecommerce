@@ -13,12 +13,6 @@ export interface IProductData {
     };
     name: string;
   };
-  // subCategory: {
-  //   sys: {
-  //     id: string;
-  //   };
-  //   name: string;
-  // };
   image: {
     sys: {
       id: string;

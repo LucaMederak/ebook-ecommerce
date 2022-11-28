@@ -70,7 +70,7 @@ const Slider = () => {
         <motion.h1 variants={fadeItem}>{currentSliderItem.name}</motion.h1>
         <motion.p variants={fadeItem}>{currentSliderItem.description}</motion.p>
 
-        <Link href={"/categories"}>
+        <Link href={`/${currentSliderItem.link}`}>
           <a>więcej</a>
         </Link>
       </Styled.CategoryInfoWrapper>

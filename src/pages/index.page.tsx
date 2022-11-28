@@ -40,11 +40,6 @@ const Home: NextPage = () => {
             title="Doradzamy w wyborze"
             description={`Chętnie doradzimy w wyborze ebooka`}
           />
-          {/* <Offer
-            icon={<FaTruck />}
-            title="Bezpieczna wysyłka"
-            description={`Dbamy aby produkty były odpowiednio zapakowane`}
-          /> */}
         </OfferContainer>
         <RecommendProducts />
         <SaleProducts />

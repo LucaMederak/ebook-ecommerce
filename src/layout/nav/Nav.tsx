@@ -67,11 +67,8 @@ const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
     ...productsMainValues(products),
   ];
 
-  console.log({ data });
-
   return (
     <Styled.Container>
-      {/* <NavHeader /> */}
       <Styled.NavWrapper>
         <Link href="/">
           <a>
@@ -97,7 +94,6 @@ const Nav = ({ setBurgerOpen }: Pick<IBurgerProps, "setBurgerOpen">) => {
         </Styled.NavSearchWrapper>
         <Styled.NavOptionsWrapper>
           <ThemeOption />
-          {/* <AccountOption /> */}
           <CartOption />
         </Styled.NavOptionsWrapper>
         {searchData && (

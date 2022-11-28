@@ -39,7 +39,7 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html>
+      <Html lang="pl">
         <Head>
           <meta name="description" content="Ebook ecommerce" />
           <link
